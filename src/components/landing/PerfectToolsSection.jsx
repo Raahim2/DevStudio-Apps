@@ -3,9 +3,13 @@
 
 import React from 'react';
 import  { SectionHeader } from '../commen/SectionHeader';
-import { RingsGraphic } from './Graphics/RingsGraphic';
 import { CubesGraphic } from './Graphics/CubesGraphic';
 import { BarsGraphic } from './Graphics/BarsGraphic';
+import { OrbitalGraphic } from './Graphics/OrbitalGraphic';
+import { ComputeGraphic } from './Graphics/ComputeGraphic';
+import { AnalyticsGraphic } from './Graphics/AnalyticsGraphic';
+import { AnalyticsGraphic2 } from './Graphics/AnalyticsGraphic2';
+import { MobileUIGraphic } from './Graphics/MobileUIGraphic';
 
 export function PerfectToolsSection() {
   const playStoreLink = "https://play.google.com/store/apps/dev?id=5812710502212545050";
@@ -57,7 +61,8 @@ export function PerfectToolsSection() {
           {/* Cell 2: FIG_01 (2 Cols) */}
           <div className="relative md:col-span-2 p-8 md:p-12 border-b border-r border-zinc-800/80 flex items-center justify-center h-[380px] overflow-hidden">
             <span className="absolute top-8 left-8 font-mono text-[10px] tracking-widest text-zinc-600">FIG_01</span>
-            <RingsGraphic />
+            <OrbitalGraphic />
+            
           </div>
 
 
@@ -65,7 +70,8 @@ export function PerfectToolsSection() {
           {/* Cell 3: FIG_02 (2 Cols) */}
           <div className="relative md:col-span-2 p-8 md:p-12 border-b border-r border-zinc-800/80 flex items-center justify-center h-[380px] overflow-hidden">
             <span className="absolute top-8 left-8 font-mono text-[10px] tracking-widest text-zinc-600">FIG_02</span>
-            <CubesGraphic />
+            <AnalyticsGraphic />
+
           </div>
 
           {/* Cell 4: React to macOS Info (1 Col) */}
@@ -85,7 +91,8 @@ export function PerfectToolsSection() {
           {/* Cell 5: FIG_03 (1 Col) */}
           <div className="relative md:col-span-1 p-8 md:p-12 border-b border-r border-zinc-800/80 flex items-center justify-center h-[320px] overflow-hidden">
             <span className="absolute top-8 left-8 font-mono text-[10px] tracking-widest text-zinc-600">FIG_03</span>
-            <BarsGraphic />
+            <ComputeGraphic />
+
           </div>
 
           {/* Cell 6: Built-in UI Info (1 Col) */}
@@ -103,7 +110,7 @@ export function PerfectToolsSection() {
           {/* Cell 7: FIG_04 (1 Col) */}
           <div className="relative md:col-span-1 p-8 md:p-12 border-b border-r border-zinc-800/80 flex items-center justify-center h-[320px] overflow-hidden">
             <span className="absolute top-8 left-8 font-mono text-[10px] tracking-widest text-zinc-600">FIG_04</span>
-            <RingsGraphic />
+            <MobileUIGraphic />
           </div>
 
 
@@ -123,7 +130,7 @@ export function PerfectToolsSection() {
           {/* Cell 9: FIG_05 (2 Cols) */}
           <div className="relative md:col-span-2 p-8 md:p-12 border-b border-r border-zinc-800/80 flex items-center justify-center h-[380px] overflow-hidden">
             <span className="absolute top-8 left-8 font-mono text-[10px] tracking-widest text-zinc-600">FIG_05</span>
-            <CubesGraphic />
+            <AnalyticsGraphic2/>
           </div>
 
 

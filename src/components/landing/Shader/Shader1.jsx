@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
 
-export function Shader() {
+export function Shader1() {
   // TypeScript type annotation removed for JS/JSX compatibility
   const containerRef = useRef(null)
 
