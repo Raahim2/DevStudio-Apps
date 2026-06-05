@@ -1,0 +1,592 @@
+{
+  "version": 1,
+  "updatedAt": "2026-01-11",
+  "patterns": [
+    {
+      "total": "60"
+    },
+    {
+      "premium_ids": [
+        4,
+        7,
+        8,
+        13,
+        17,
+        20,
+        21,
+        22,
+        25,
+        29,
+        31,
+        34,
+        36,
+        38,
+        47,
+        49,
+        54,
+        55,
+        59
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "appreals",
+      "title": "Appreals",
+      "images": [
+        {
+          "id": "appreals1",
+          "name": "Classic Cotton T-Shirt",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals2",
+          "name": "Essential Streetwear Hoodie",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals3",
+          "name": "Minimalist Canvas Tote Bag",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals4",
+          "name": "Premium Fleece Crewneck",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals5",
+          "name": "Heritage Denim Trucker Jacket",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/5.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals6",
+          "name": "Signature Pique Polo Shirt",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/6.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals7",
+          "name": "Adjustable Baseball Cap",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/7.webp",
+          "isPremium": true
+        },
+        {
+          "id": "appreals8",
+          "name": "Versatile Cotton Bandana",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/8.webp",
+          "isPremium": true
+        },
+        {
+          "id": "appreals9",
+          "name": "Slim Fit Tailored Trousers",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals10",
+          "name": "Straight Leg Denim Jeans",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/10.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals11",
+          "name": "Modern Structured Blazer",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/11.webp",
+          "isPremium": true
+        },
+        {
+          "id": "appreals12",
+          "name": "Urban Flight Bomber Jacket",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/12.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals13",
+          "name": "Classic Harrington Zip Jacket",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/13.webp",
+          "isPremium": false
+        },
+        {
+          "id": "appreals14",
+          "name": "Athleisure Fleece Joggers",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/14.webp",
+          "isPremium": true
+        },
+        {
+          "id": "appreals15",
+          "name": "Protective Performance Gloves",
+          "url": "https://devstudio-apps.vercel.app/renderly/Appreals/15.webp",
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "id": "automobile",
+      "title": "Automobile",
+      "images": [
+        {
+          "id": "automobile1",
+          "name": "High-Performance Exotic Supercar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile2",
+          "name": "Luxury Performance Sport SUV",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile3",
+          "name": "Aero-Dynamic Track Supercar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile4",
+          "name": "Precision Mid-Engine Sports Car",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile5",
+          "name": "Ultimate W16 Luxury Hypercar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/5.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile6",
+          "name": "Modern Executive Business Sedan",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/6.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile7",
+          "name": "High-Velocity Sport Motorcycle",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/7.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile8",
+          "name": "Pro-Circuit Formula Race Car",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/8.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile9",
+          "name": "Refined Premium Family Crossover",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile10",
+          "name": "Iconic Rugged Off-Road 4x4",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/10.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile11",
+          "name": "Radical Concept Track Hypercar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/11.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile12",
+          "name": "VIP Presidential Stretch Limousine",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/12.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile13",
+          "name": "Ultra-Luxury Private Oceanic Yacht",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/13.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile14",
+          "name": "Mini Cooper car",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/14.webp",
+          "isPremium": true
+        },
+        {
+          "id": "automobile15",
+          "name": "Luxary Supercar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/15.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile16",
+          "name": "Bus",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/16.webp",
+          "isPremium": false
+        },
+        {
+          "id": "automobile17",
+          "name": "Van",
+          "url": "https://devstudio-apps.vercel.app/renderly/Automobile/17.webp",
+          "isPremium": false
+        }
+      ]
+    },
+    {
+      "id": "devices",
+      "title": "Devices",
+      "images": [
+        {
+          "id": "devices1",
+          "name": "Minimalist Smartphone Case",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices2",
+          "name": "Bezel-Less Flagship Smartphone",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices3",
+          "name": "Ultra-Slim Professional Laptop",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices4",
+          "name": "Vertical Tablet Display",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices5",
+          "name": "Modern Desktop All-in-One",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/5.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices6",
+          "name": "Smart Fitness Watch",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/6.webp",
+          "isPremium": true
+        },
+        {
+          "id": "devices7",
+          "name": "Web Browser Desktop Interface",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/7.webp",
+          "isPremium": true
+        },
+        {
+          "id": "devices8",
+          "name": "Isometric Perspective Smartphone",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/8.webp",
+          "isPremium": true
+        },
+        {
+          "id": "devices9",
+          "name": "Widescreen Cinematic Monitor",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices10",
+          "name": "Clean Front-Facing Tablet",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/10.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices11",
+          "name": "Landscape Mobile Mockup",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/11.webp",
+          "isPremium": true
+        },
+        {
+          "id": "devices12",
+          "name": "Floating Smartphone Mockup",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/12.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices13",
+          "name": "Frontal App Design Showcase",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/13.webp",
+          "isPremium": false
+        },
+        {
+          "id": "devices14",
+          "name": "3D Perspective Phone Stand",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/14.webp",
+          "isPremium": true
+        },
+        {
+          "id": "devices15",
+          "name": "4K Ultra-Thin Smart TV",
+          "url": "https://devstudio-apps.vercel.app/renderly/Devices/15.webp",
+          "isPremium": false
+        }
+      ]
+    },
+    {
+      "id": "furniture",
+      "title": "Furniture",
+      "images": [
+        {
+          "id": "furniture1",
+          "name": "Modern Minimalist 2-Seater Sofa",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture2",
+          "name": "Triple-Door Wardrobe Cabinet",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture3",
+          "name": "Contemporary Platform Bed Frame",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture4",
+          "name": "Luxury Reclining Armchair",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture5",
+          "name": "Minimalist Storage Sideboard",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/5.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture6",
+          "name": "Classic Fabric Lounge Chair",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/6.webp",
+          "isPremium": true
+        },
+        {
+          "id": "furniture7",
+          "name": "Ergonomic Swivel Office Chair",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/7.webp",
+          "isPremium": true
+        },
+        {
+          "id": "furniture8",
+          "name": "Essential Rectangular Coffee Table",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/8.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture9",
+          "name": "Scandinavian Style Side Chair",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture10",
+          "name": "Compact Two-Door Floor Cupboard",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/10.webp",
+          "isPremium": true
+        },
+        {
+          "id": "furniture11",
+          "name": "Modern Five-Tier Open Bookshelf",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/11.webp",
+          "isPremium": true
+        },
+        {
+          "id": "furniture12",
+          "name": "Low-Profile Media Console Unit",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/12.webp",
+          "isPremium": true
+        },
+        {
+          "id": "furniture13",
+          "name": "Elegant Dressing Table Vanity",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/13.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture14",
+          "name": "Multi-Level Utility Storage Rack",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/14.webp",
+          "isPremium": false
+        },
+        {
+          "id": "furniture15",
+          "name": "Soft Padded Square Ottoman",
+          "url": "https://devstudio-apps.vercel.app/renderly/Furniture/15.webp",
+          "isPremium": false
+        }
+      ]
+    },
+    {
+      "id": "prints",
+      "title": "Prints",
+      "images": [
+        {
+          "id": "prints1",
+          "name": "Minimalist Portrait Wall Poster",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints2",
+          "name": "Horizontal Wall Signage Mockup",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints3",
+          "name": "Aesthetic Tabletop Leaning Print",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints4",
+          "name": "Urban Sky Outdoor Billboard",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints5",
+          "name": "Slim Black-Framed Gallery Poster",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/5.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints6",
+          "name": "Handheld A4 Paper Showcase",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/6.webp",
+          "isPremium": true
+        },
+        {
+          "id": "prints7",
+          "name": "Top-Down Creative Stationery Set",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/7.webp",
+          "isPremium": true
+        },
+        {
+          "id": "prints8",
+          "name": "Stacked Marble Business Cards",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/8.webp",
+          "isPremium": true
+        },
+        {
+          "id": "prints9",
+          "name": "Panoramic Cinematic Highway Billboard",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "prints10",
+          "name": "Modern T-Pole Street Billboard",
+          "url": "https://devstudio-apps.vercel.app/renderly/Prints/10.webp",
+          "isPremium": false
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Product",
+      "images": [
+        {
+          "id": "product1",
+          "name": "Modern Interior",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/1.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product2",
+          "name": "Insulated Stainless Steel Bottle",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/2.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product3",
+          "name": "Dynamic Floating Paper Cup",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/3.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product4",
+          "name": "Clean Hardcover Book Showcase",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/4.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product5",
+          "name": "Minimalist Summer Flip-Flops",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/5.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product6",
+          "name": "Spiral Notebook on Marble Surface",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/6.webp",
+          "isPremium": true
+        },
+        {
+          "id": "product7",
+          "name": "Professional Cosmetic Squeeze Tube",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/7.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product8",
+          "name": "Essential Ceramic Coffee Mug",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/8.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product9",
+          "name": "Luxury Glass Fragrance Bottle",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/9.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product10",
+          "name": "Matte Plastic Supplement Bottle",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/10.webp",
+          "isPremium": true
+        },
+        {
+          "id": "product11",
+          "name": "Premium Open Face Cream Jar",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/11.webp",
+          "isPremium": true
+        },
+        {
+          "id": "product12",
+          "name": "To-Go Coffee Paper Cup",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/12.webp",
+          "isPremium": true
+        },
+        {
+          "id": "product13",
+          "name": "Soft Square Interior Throw Pillow",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/13.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product14",
+          "name": "Tall Elegant Pump Dispenser Bottle",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/14.webp",
+          "isPremium": false
+        },
+        {
+          "id": "product15",
+          "name": "Comfortable Silk Sleep Mask",
+          "url": "https://devstudio-apps.vercel.app/renderly/Product/15.webp",
+          "isPremium": true
+        }
+      ]
+    }
+  ]
+}

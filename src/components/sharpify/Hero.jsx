@@ -60,10 +60,10 @@ export default function AppShowcase() {
                     <Star className="w-3.5 h-3.5 fill-current" />
                     <Star className="w-3.5 h-3.5 fill-current" />
                     <Star className="w-3.5 h-3.5 fill-current" />
-                    <Star className="w-3.5 h-3.5 fill-current" />
-                    <span className="text-white text-xs font-mono font-bold ml-1">4.8</span>
+                    <Star className="w-3.5 h-3.5 " />
+                    <span className="text-white text-xs font-mono font-bold ml-1">4.1</span>
                   </div>
-                  <p className="text-xs text-zinc-500 font-mono mt-1">Based on 24,000+ ratings</p>
+                  <p className="text-xs text-zinc-500 font-mono mt-1">Active 1000+ users</p>
                 </div>
               </div>
             </div>
