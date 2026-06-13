@@ -27,7 +27,7 @@ export function FeaturesSection() {
         {/* Header Text Section */}
         <SectionHeader 
           highlightedText="A new species of product tool."
-          normalText="Purpose-built for modern teams with AI workflows at its core, DevStudio sets a new standard for planning and building products."
+          normalText="Purpose-built for seamless mobile experiences. A curated suite of lightweight, beautifully designed utilities engineered to elevate your daily digital routine."
         />
         
 
