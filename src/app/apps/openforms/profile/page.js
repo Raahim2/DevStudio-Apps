@@ -1,10 +1,11 @@
-"use client"
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+"use client"; // Required for client-side hooks and redirects
 
-export default function ProfileRedirect() {
-  const router = useRouter();
-  const { userId } = router.query;
+import { useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation'; // CORRECT IMPORT
+
+function ProfileRedirectContent() {
+  const searchParams = useSearchParams();
+  const userId = searchParams.get('userId'); // Correctly reads ?userId= from the URL
 
   useEffect(() => {
     if (!userId) return;
@@ -15,10 +16,9 @@ export default function ProfileRedirect() {
     // 2. Try to redirect the mobile browser to the app
     window.location.href = appDeepLink;
 
-    // 3. Fallback: If the app doesn't open in 2.5 seconds, redirect to play store or show fallback UI
+    // 3. Fallback: If the app doesn't open in 2.5 seconds
     const timer = setTimeout(() => {
-      // You can redirect to Google Play Store link here if they don't have the app
-      console.log("App not installed. Stay on website or go to store.");
+      console.log("App not installed. User remains on browser fallback.");
     }, 2500);
 
     return () => clearTimeout(timer);
@@ -27,13 +27,35 @@ export default function ProfileRedirect() {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontFamily: 'sans-serif' }}>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontWeight: 900 }}>OPENFORMS</h1>
+        <h1 style={{ fontWeight: 900, letterSpacing: -1 }}>OPENFORMS</h1>
         <p style={{ color: '#888', marginTop: 10 }}>Redirecting to app...</p>
-        {/* Optional: Add a manual button just in case */}
-        <a href={`openforms://profile/${userId}`} style={{ marginTop: 20, display: 'inline-block', backgroundColor: '#000', color: '#fff', padding: '12px 24px', textDecoration: 'none', fontWeight: 'bold' }}>
-          OPEN IN APP
-        </a>
+        
+        {userId ? (
+          <a 
+            href={`openforms://profile/${userId}`} 
+            style={{ marginTop: 20, display: 'inline-block', backgroundColor: '#000', color: '#fff', padding: '12px 24px', textDecoration: 'none', fontWeight: 'bold' }}
+          >
+            OPEN IN APP
+          </a>
+        ) : (
+          <p style={{ color: '#FF3B30', marginTop: 20, fontSize: 13, fontWeight: 'bold' }}>
+            ERROR: MISSING USER ID
+          </p>
+        )}
       </div>
     </div>
+  );
+}
+
+// Next.js App Router requires any component using useSearchParams to be wrapped in Suspense
+export default function ProfileRedirect() {
+  return (
+    <Suspense fallback={
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <p style={{ fontFamily: 'sans-serif', fontWeight: 'bold' }}>Loading...</p>
+      </div>
+    }>
+      <ProfileRedirectContent />
+    </Suspense>
   );
 }
