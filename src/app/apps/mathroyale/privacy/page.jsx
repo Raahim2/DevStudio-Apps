@@ -1,4 +1,4 @@
-// app/apps/momentum/privacy/page.jsx
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -8,7 +8,7 @@ import Footer from '@/components/commen/Footer';
 // ==========================================
 // 3. MAIN PRIVACY POLICY COMPONENT
 // ==========================================
-export default function MomentumPrivacyPage() {
+export default function MathRoyalePrivacyPage() {
   const [activeSection, setActiveSection] = useState('scope');
 
   // List of privacy sections for the sticky table of contents
@@ -50,7 +50,6 @@ export default function MomentumPrivacyPage() {
 
       {/* Hero Header Block */}
       <div className="relative pt-36 pb-20 md:pb-28 border-b border-zinc-900 overflow-hidden">
-        {/* Ambient Top Glow in custom Violet matching Momentum's `#8b5cf6` colorTheme */}
         <div className="absolute top-0 left-0 right-0 h-[240px] bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-violet-500/10 via-transparent to-transparent pointer-events-none" />
         
         <div className="mx-auto max-w-7xl px-6 sm:px-8 text-left relative z-10">
@@ -61,7 +60,7 @@ export default function MomentumPrivacyPage() {
             Privacy Policy
           </h1>
           <p className="font-mono text-zinc-500 text-xs sm:text-[13px] mt-6 leading-none">
-            App Name: <span className="text-white">Momentum: Gamified Learning</span> | Last Updated: June 1, 2026
+            App Name: <span className="text-white">Math Royale</span> | Last Updated: June 1, 2026
           </p>
         </div>
       </div>
@@ -104,10 +103,10 @@ export default function MomentumPrivacyPage() {
             </h2>
             <div className="h-[1px] w-full bg-zinc-900" />
             <p>
-              This Privacy Policy explains how <strong className="text-white">DevStudio Apps</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) protects your privacy when using our mobile application, <strong className="text-white">Momentum: Gamified Learning</strong> (distributed on the Google Play Store).
+              This Privacy Policy explains how <strong className="text-white">DevStudio Apps</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) protects your privacy when using our mobile application, <strong className="text-white">Math Royale</strong> (distributed on the Google Play Store).
             </p>
             <p>
-              By installing and utilizing Momentum, you consent to the storage architectures, telemetry processing, and analytic parameters detailed within this policy.
+              By installing and utilizing Math Royale, you consent to the storage architectures, telemetry processing, and analytic parameters detailed within this policy.
             </p>
           </section>
 
@@ -118,7 +117,7 @@ export default function MomentumPrivacyPage() {
             </h2>
             <div className="h-[1px] w-full bg-zinc-900" />
             <p>
-              To coordinate gamified quest progression, leveling structures, and habit tracking, Momentum collects and processes the following parameters:
+              To coordinate gamified quest progression, leveling structures, and habit tracking, Math Royale collects and processes the following parameters:
             </p>
             <ul className="list-disc pl-6 flex flex-col gap-y-2 text-zinc-400">
               <li><strong className="text-white">Anonymized Telemetry:</strong> Hardware configurations, operating system versions, and performance reports (such as rendering lag or loading errors) are collected to ensure core stability.</li>
@@ -137,7 +136,7 @@ export default function MomentumPrivacyPage() {
               Your gamified progress—including accumulated experience points (XP), unlocked levels, completed logic challenges, daily quest streaks, and custom achievements—is **saved exclusively on your device&apos;s isolated local storage** [1].
             </p>
             <p>
-              Because your academic parameters are strictly sandboxed on your device, we have zero access to them. When you delete or uninstall Momentum from your device, your accumulated levels, quest histories, and running progress metrics are permanently and non-recoverably deleted.
+              Because your academic parameters are strictly sandboxed on your device, we have zero access to them. When you delete or uninstall Math Royale from your device, your accumulated levels, quest histories, and running progress metrics are permanently and non-recoverably deleted.
             </p>
           </section>
 
@@ -163,7 +162,7 @@ export default function MomentumPrivacyPage() {
             </h2>
             <div className="h-[1px] w-full bg-zinc-900" />
             <p>
-              Momentum is a logic-aptitude training tool designed for personal development. We comply strictly with COPPA and Google Play&apos;s Families Policies.
+              Math Royale is a logic-aptitude training tool designed for personal development. We comply strictly with COPPA and Google Play&apos;s Families Policies.
             </p>
             <p>
               Because our application does not request, harvest, or maintain personal profiles, we do not knowingly gather any personally identifiable information from children under the age of 13.
@@ -194,15 +193,15 @@ export default function MomentumPrivacyPage() {
               For legal questions, purchase confirmations, or help regarding your learning progress or streaks, please reach out to us directly on Google Play:
             </p>
             <div className="mt-4 p-6 rounded-2xl border border-zinc-800 bg-[#100c14]/40 flex flex-col gap-y-2">
-              <span className="font-semibold text-white text-base">Momentum Support Team</span>
+              <span className="font-semibold text-white text-base">Math Royale Support Team</span>
               <span className="text-[13px] font-mono text-zinc-500">Google Play Developer Account</span>
               <a 
-                href="https://play.google.com/store/apps/details?id=com.raahim2.Momentum" 
+                href="https://play.google.com/store/apps/details?id=com.raahim2.Math Royale" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-violet-400 hover:underline text-[13.5px] mt-2 inline-flex items-center gap-x-1"
               >
-                play.google.com/store/apps/details?id=com.raahim2.Momentum ↗
+                play.google.com/store/apps/details?id=com.raahim2.Math Royale ↗
               </a>
             </div>
           </section>

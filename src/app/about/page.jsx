@@ -42,12 +42,12 @@ export default function AboutPage() {
     {
       date: "Coming Soon",
       appName: "Future Pipeline",
-      description: "Preparing our next phase of modern utility systems: Pocket Ledger bookkeeping, OpenForms survey frameworks, and Momentum gamified quests.",
+      description: "Preparing our next phase of modern utility systems: Pocket Ledger bookkeeping, OpenForms survey frameworks, and Math Royale gamified quests.",
       isPipeline: true,
       upcomingLogos: [
         "https://lh3.googleusercontent.com/HpK1uj1KxRl8rJy63JcoeSYx1jsDGpPJD1FMZ1zj7CuWHwU2VILKRLpkM8iFLkJO2ELrUK-mOdSpLv4kaqbP", // Pocket Ledger
         "https://lh3.googleusercontent.com/Yj_w1vQ-ABY4dOMtF0qJ0ePUIi9Tb7TM-XvgIGFnwPAdbRHY2p_NujLumYI68vHVYBofA6zd5281JzJWWi60Oh0", // OpenForms
-        "https://lh3.googleusercontent.com/vbrAcXouSnfoODwLLGZhdHDCfXhcW_i4lp9eTtOoSYAUCinGziNAkVYS41QEC3tccHmR3YQak2agqefl1ZVe"  // Momentum
+        "https://lh3.googleusercontent.com/GZcsC-sWWPX9_ujSNnc8AnxK7X34t8DRte1lhvIMZacwcC1jG2O6G0h4GrWJBQh4TSQ_m_7Aa949AwJplM4pEw"  // Math Royale
       ],
       color: "bg-zinc-700 shadow-none border border-zinc-600"
     }

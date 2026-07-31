@@ -89,11 +89,11 @@ export default function PrivacyPage() {
     },
     {
       id: 4,
-      name: "Momentum",
+      name: "MathRoyale",
       description: "Turn your learning goals into an epic quest. Gain XP, level up, and build consistent habits.",
       logo: "https://lh3.googleusercontent.com/vbrAcXouSnfoODwLLGZhdHDCfXhcW_i4lp9eTtOoSYAUCinGziNAkVYS41QEC3tccHmR3YQak2agqefl1ZVe",
       colorTheme: "#8b5cf6",
-      redirect: "/apps/momentum/privacy"
+      redirect: "/apps/mathroyale/privacy"
     },
     {
       id: 5,

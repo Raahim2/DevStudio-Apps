@@ -43,13 +43,13 @@ export function AppsSection() {
     },
     {
       id: 4,
-      name: "Momentum",
+      name: "MathRoyale",
       description: "Turn your learning goals into an epic quest. Gain XP, level up, and build consistent habits.",
       category: "Engineering",
       logo: "https://lh3.googleusercontent.com/vbrAcXouSnfoODwLLGZhdHDCfXhcW_i4lp9eTtOoSYAUCinGziNAkVYS41QEC3tccHmR3YQak2agqefl1ZVe",
       featureGraphic: "/fg3.png",
       colorTheme: "#8b5cf6",
-      redirect: "/apps/momentum"
+      redirect: "/apps/mathroyale"
     },
     {
       id: 5,

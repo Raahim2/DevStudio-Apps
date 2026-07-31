@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "DevStudio Apps | Premium Mobile Utilities",
-  description: "A curated suite of lightweight, beautifully designed Android utilities engineered for performance and privacy. Explore Sharpify, Momentum, Renderly, and more.",
+  description: "A curated suite of lightweight, beautifully designed Android utilities engineered for performance and privacy. Explore Sharpify, Math Royale, Renderly, and more.",
 };
 
 export default function RootLayout({ children }) {

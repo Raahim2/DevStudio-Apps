@@ -9,7 +9,7 @@ export default function Footer() {
       title: "Our Apps",
       links: [
         { label: "Counter", href: "/apps/counter" },
-        { label: "Momentum", href: "/apps/momentum" },
+        { label: "Math Royale", href: "/apps/mathroyale" },
         { label: "OpenForms", href: "/apps/openforms" },
         { label: "Pocket Ledger", href: "/apps/pocket-ledger" },
         { label: "Renderly", href: "/apps/renderly" },

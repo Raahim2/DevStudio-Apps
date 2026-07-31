@@ -107,7 +107,7 @@ export default function TermsPage() {
               These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity, and <strong className="text-white">DevStudio Apps</strong>, concerning your access to and use of our mobile applications, utilities, websites, and services.
             </p>
             <p>
-              By installing, accessing, or utilizing any of our products—including but not limited to <em>Counter</em>, <em>Momentum</em>, <em>OpenForms</em>, <em>Pocket Ledger</em>, <em>Renderly</em>, and <em>Sharpify</em>—you agree that you have read, understood, and agreed to be bound by all of these Terms of Service. If you do not agree with all of these terms, you are expressly prohibited from using our services.
+              By installing, accessing, or utilizing any of our products—including but not limited to <em>Counter</em>, <em>Math Royale</em>, <em>OpenForms</em>, <em>Pocket Ledger</em>, <em>Renderly</em>, and <em>Sharpify</em>—you agree that you have read, understood, and agreed to be bound by all of these Terms of Service. If you do not agree with all of these terms, you are expressly prohibited from using our services.
             </p>
           </section>
 

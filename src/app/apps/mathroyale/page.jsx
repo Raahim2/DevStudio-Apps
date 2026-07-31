@@ -1,4 +1,3 @@
-// app/apps/momentum/page.jsx
 'use client';
 
 import React, { useState } from 'react';
@@ -7,16 +6,16 @@ import Navbar from '@/components/commen/Navbar';
 import Footer from '@/components/commen/Footer';
 
 // ==========================================
-// 3. MAIN MOMENTUM LANDING PAGE
+// 3. MAIN MATH ROYALE LANDING PAGE
 // ==========================================
-export default function MomentumLandingPage() {
+export default function MathRoyaleLandingPage() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [levelUpTrigger, setLevelUpTrigger] = useState(false);
   const [xpProgress, setXpProgress] = useState(40); // 40% initial progress
   const [currentLevel, setCurrentLevel] = useState(1);
 
   const playStoreUrl = "https://play.google.com/store/apps/details?id=com.raahim2.Momentum";
-  const appLogo = "https://lh3.googleusercontent.com/vbrAcXouSnfoODwLLGZhdHDCfXhcW_i4lp9eTtOoSYAUCinGziNAkVYS41QEC3tccHmR3YQak2agqefl1ZVe";
+  const appLogo = "https://lh3.googleusercontent.com/GZcsC-sWWPX9_ujSNnc8AnxK7X34t8DRte1lhvIMZacwcC1jG2O6G0h4GrWJBQh4TSQ_m_7Aa949AwJplM4pEw";
 
   const quizOptions = [26, 28, 30, 32];
   const correctAnswer = 30;
@@ -76,7 +75,7 @@ export default function MomentumLandingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-x-2 rounded-full bg-violet-500 px-6 py-3 text-sm font-semibold text-black hover:bg-violet-400 active:scale-95 transition-all duration-150 shadow-[0_0_20px_rgba(139,92,246,0.3)]"
             >
-              Get Momentum on Google Play
+              Get Math Royale on Google Play
               <span className="text-zinc-900 font-mono text-sm leading-none">↗</span>
             </a>
           </div>
@@ -92,7 +91,7 @@ export default function MomentumLandingPage() {
           {/* Top Header details */}
           <div className="flex items-center justify-between w-full z-10">
             <div className="flex items-center gap-2.5">
-              <img src={appLogo} alt="Momentum Logo" className="w-9 h-9 rounded-lg border border-white/5" />
+              <img src={appLogo} alt="Math Royale Logo" className="w-9 h-9 rounded-lg border border-white/5" />
               <span className="text-xs font-semibold text-zinc-300">Level Quest</span>
             </div>
             
@@ -231,7 +230,7 @@ export default function MomentumLandingPage() {
           Ready to level up your brain?
         </h2>
         <p className="text-zinc-500 text-sm sm:text-base mt-4 max-w-md">
-          Download Momentum today and start conquering micro-logic tasks and gamified reasoning quests.
+          Download Math Royale today and start conquering micro-logic tasks and gamified reasoning quests.
         </p>
         <a 
           href={playStoreUrl}
