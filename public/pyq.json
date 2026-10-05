@@ -1,0 +1,801 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-10-05",
+  "companies": [
+    {
+      "id": "google",
+      "name": "Google SWE",
+      "domain": "google.com",
+      "themeColor": "#4285F4",
+      "totalTarget": 10,
+      "problems": [
+        {
+          "id": "word-subsets",
+          "title": "Word Subsets",
+          "difficulty": "MEDIUM",
+          "frequency": 92,
+          "topics": ["Array", "Hash Table", "String"],
+          "leetcodeUrl": "https://leetcode.com/problems/word-subsets/",
+          "intuition": "Consolidate all target constraints into a single maximum frequency vector for each character across all words in words2. Then validate each word in words1 against this consolidated requirement in O(1) character space.",
+          "timeComplexity": "O(A + B)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Comparing against each word in words2 individually causes O(A * B) TLE",
+            "Failing to handle duplicate characters in individual constraint words"
+          ]
+        },
+        {
+          "id": "longest-palindrome",
+          "title": "Longest Palindrome",
+          "difficulty": "EASY",
+          "frequency": 85,
+          "topics": ["Hash Table", "String", "Greedy"],
+          "leetcodeUrl": "https://leetcode.com/problems/longest-palindrome/",
+          "intuition": "Count character occurrences. Add all even counts directly. For odd counts, include (count - 1), and reserve exactly one odd character to sit at the center of the palindrome.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Treating uppercase and lowercase letters as identical characters",
+            "Adding more than one single center pivot element"
+          ]
+        },
+        {
+          "id": "trapping-rain-water",
+          "title": "Trapping Rain Water",
+          "difficulty": "HARD",
+          "frequency": 97,
+          "topics": ["Array", "Two Pointers", "Dynamic Programming", "Stack"],
+          "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water/",
+          "intuition": "Use two pointers converging from both boundaries while maintaining leftMax and rightMax. Water trapped above the current index is bounded by min(leftMax, rightMax) minus the local height.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Advancing the wrong pointer instead of the one with the smaller height limit",
+            "Assuming trapped water can be accumulated at the extreme edges"
+          ]
+        },
+        {
+          "id": "minimum-window-substring",
+          "title": "Minimum Window Substring",
+          "difficulty": "HARD",
+          "frequency": 94,
+          "topics": ["Hash Table", "String", "Sliding Window"],
+          "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/",
+          "intuition": "Expand a sliding window with a right pointer until all required characters are satisfied. Then shrink from the left pointer to find the minimal valid span before moving forward again.",
+          "timeComplexity": "O(M + N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Not handling repeated occurrences of characters required by target string t",
+            "Inefficient hash-map equality comparisons inside the sliding window loop"
+          ]
+        },
+        {
+          "id": "course-schedule-ii",
+          "title": "Course Schedule II",
+          "difficulty": "MEDIUM",
+          "frequency": 90,
+          "topics": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"],
+          "leetcodeUrl": "https://leetcode.com/problems/course-schedule-ii/",
+          "intuition": "Construct an adjacency list and compute in-degrees. Use Kahn's BFS queue to strip zero in-degree nodes into the topological result. If the output size does not match total courses, a cycle exists.",
+          "timeComplexity": "O(V + E)",
+          "spaceComplexity": "O(V + E)",
+          "pitfalls": [
+            "Returning partial order when a dependency cycle prevents full completion",
+            "Flipping directed edges (prerequisite u must point to course v)"
+          ]
+        },
+        {
+          "id": "binary-tree-maximum-path-sum",
+          "title": "Binary Tree Maximum Path Sum",
+          "difficulty": "HARD",
+          "frequency": 93,
+          "topics": ["Dynamic Programming", "Tree", "Depth-First Search", "Binary Tree"],
+          "leetcodeUrl": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+          "intuition": "At each node during DFS, compute the max one-sided branch sum contributed to its parent (ignoring negative gains using max(0, gain)). Concurrently update the global path sum with node.val + leftGain + rightGain.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(H)",
+          "pitfalls": [
+            "Propagating both left and right branches upward to the parent (violates path topology)",
+            "Initializing max path sum to 0 instead of INT_MIN (fails for trees with all negative nodes)"
+          ]
+        },
+        {
+          "id": "word-ladder",
+          "title": "Word Ladder",
+          "difficulty": "HARD",
+          "frequency": 88,
+          "topics": ["Hash Table", "String", "Breadth-First Search"],
+          "leetcodeUrl": "https://leetcode.com/problems/word-ladder/",
+          "intuition": "Model words as vertices in an unweighted graph where edges connect words differing by exactly one character. Use bidirectional BFS starting simultaneously from beginWord and endWord to find the shortest transformation path.",
+          "timeComplexity": "O(M^2 * N)",
+          "spaceComplexity": "O(M^2 * N)",
+          "pitfalls": [
+            "Building the full N^2 adjacency matrix up front instead of mutating characters on the fly",
+            "Failing to verify whether endWord exists in the initial dictionary"
+          ]
+        },
+        {
+          "id": "edit-distance",
+          "title": "Edit Distance",
+          "difficulty": "HARD",
+          "frequency": 89,
+          "topics": ["String", "Dynamic Programming"],
+          "leetcodeUrl": "https://leetcode.com/problems/edit-distance/",
+          "intuition": "Formulate a 2D table where dp[i][j] represents the minimum operations to convert word1[0..i-1] to word2[0..j-1]. If characters match, dp[i][j] = dp[i-1][j-1]; otherwise take 1 + min(insert, delete, replace).",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(M * N)",
+          "pitfalls": [
+            "Forgetting boundary base conditions (converting non-empty string to empty string takes deletions)",
+            "Off-by-one indexing between 1-indexed DP table and 0-indexed string pointers"
+          ]
+        },
+        {
+          "id": "maximal-square",
+          "title": "Maximal Square",
+          "difficulty": "MEDIUM",
+          "frequency": 86,
+          "topics": ["Array", "Dynamic Programming", "Matrix"],
+          "leetcodeUrl": "https://leetcode.com/problems/maximal-square/",
+          "intuition": "Let dp[i][j] represent the side length of the maximum square whose bottom-right corner is at (i, j). If matrix[i][j] == '1', dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]).",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Returning the side length rather than total square area (side * side)",
+            "Reading string characters as integer values without converting '0' / '1'"
+          ]
+        },
+        {
+          "id": "maximum-score-from-removing-substrings",
+          "title": "Maximum Score From Removing Substrings",
+          "difficulty": "MEDIUM",
+          "frequency": 84,
+          "topics": ["String", "Stack", "Greedy"],
+          "leetcodeUrl": "https://leetcode.com/problems/maximum-score-from-removing-substrings/",
+          "intuition": "Greedily remove occurrences of the pattern yielding higher points first using a two-pass stack or array simulation. Then remove remaining secondary patterns in a second pass.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Interleaving checks without exhausting the higher-value substring first",
+            "Allocating multiple unnecessary strings during replacement steps leading to memory limits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldman-sachs",
+      "name": "Goldman Sachs Analyst & SDE",
+      "domain": "goldmansachs.com",
+      "themeColor": "#7399C6",
+      "totalTarget": 10,
+      "problems": [
+        {
+          "id": "first-unique-character-in-a-string",
+          "title": "First Unique Character in a String",
+          "difficulty": "EASY",
+          "frequency": 95,
+          "topics": ["Hash Table", "String", "Queue", "Counting"],
+          "leetcodeUrl": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+          "intuition": "Build a frequency array of size 26 in the initial pass. Perform a second sequential pass over the string and immediately return the index of the first character with a count of 1.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Returning the ASCII character value instead of its 0-indexed string index",
+            "Assuming unordered hash table iterations preserve the original insertion order"
+          ]
+        },
+        {
+          "id": "remove-all-adjacent-duplicates-in-string-ii",
+          "title": "Remove All Adjacent Duplicates in String II",
+          "difficulty": "MEDIUM",
+          "frequency": 91,
+          "topics": ["String", "Stack"],
+          "leetcodeUrl": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/",
+          "intuition": "Maintain an explicit stack of pairs storing [character, consecutiveCount]. When the incoming character matches the top of the stack, increment its count. If the count reaches k, pop it.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Naive repeated string substitutions lead to O(N^2 / K) timeout",
+            "Not reconstructing the string properly from the remaining stack elements"
+          ]
+        },
+        {
+          "id": "best-time-to-buy-and-sell-stock-ii",
+          "title": "Best Time to Buy and Sell Stock II",
+          "difficulty": "MEDIUM",
+          "frequency": 94,
+          "topics": ["Array", "Dynamic Programming", "Greedy"],
+          "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+          "intuition": "Accumulate all upward price slopes. For every consecutive day where prices[i] > prices[i-1], add (prices[i] - prices[i-1]) to the cumulative profit.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Over-complicating with 2D state machine DP when simple greedy delta summing suffices",
+            "Forgetting to allow buying and selling on the exact same day in succession"
+          ]
+        },
+        {
+          "id": "maximum-product-subarray",
+          "title": "Maximum Product Subarray",
+          "difficulty": "MEDIUM",
+          "frequency": 92,
+          "topics": ["Array", "Dynamic Programming"],
+          "leetcodeUrl": "https://leetcode.com/problems/maximum-product-subarray/",
+          "intuition": "Track both running maximum and minimum products at each position because a negative number multiplied by a previous negative minimum flips into a positive maximum.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Overwriting currentMax before using its previous value to compute currentMin",
+            "Resetting trackers on encountering zero instead of accounting for 0 as a candidate product"
+          ]
+        },
+        {
+          "id": "coin-change",
+          "title": "Coin Change",
+          "difficulty": "MEDIUM",
+          "frequency": 93,
+          "topics": ["Array", "Dynamic Programming", "Breadth-First Search"],
+          "leetcodeUrl": "https://leetcode.com/problems/coin-change/",
+          "intuition": "Create a bottom-up DP table of size amount + 1 populated with amount + 1. For each denomination, update dp[i] = min(dp[i], dp[i - coin] + 1). If dp[amount] > amount, return -1.",
+          "timeComplexity": "O(Amount * N)",
+          "spaceComplexity": "O(Amount)",
+          "pitfalls": [
+            "Integer overflow when adding 1 to INT_MAX in uninitialized tables",
+            "Assuming greedy choice works for non-canonical coin systems (e.g., coins [1, 3, 4] for amount 6)"
+          ]
+        },
+        {
+          "id": "rotate-image",
+          "title": "Rotate Image",
+          "difficulty": "MEDIUM",
+          "frequency": 88,
+          "topics": ["Array", "Math", "Matrix"],
+          "leetcodeUrl": "https://leetcode.com/problems/rotate-image/",
+          "intuition": "Perform a 90-degree clockwise rotation in-place by first transposing the matrix along its main diagonal, followed by reversing each row horizontally.",
+          "timeComplexity": "O(N^2)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Using an auxiliary 2D matrix when O(1) auxiliary space is strictly required",
+            "Transposing the entire square twice (undoing changes) instead of swapping across the main diagonal (j > i)"
+          ]
+        },
+        {
+          "id": "group-anagrams",
+          "title": "Group Anagrams",
+          "difficulty": "MEDIUM",
+          "frequency": 90,
+          "topics": ["Array", "Hash Table", "String", "Sorting"],
+          "leetcodeUrl": "https://leetcode.com/problems/group-anagrams/",
+          "intuition": "Use a hash table where keys represent the canonical form of strings (either sorted strings or 26-element character count tuples) and values are lists of anagrams.",
+          "timeComplexity": "O(N * K log K)",
+          "spaceComplexity": "O(N * K)",
+          "pitfalls": [
+            "Handling empty string \"\" test cases",
+            "String concatenation delimiters missing in character count hashing (e.g., counts '1,10' vs '11,0')"
+          ]
+        },
+        {
+          "id": "longest-increasing-subsequence",
+          "title": "Longest Increasing Subsequence",
+          "difficulty": "MEDIUM",
+          "frequency": 91,
+          "topics": ["Array", "Binary Search", "Dynamic Programming"],
+          "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+          "intuition": "Maintain an active tails array. For each number x, use binary search (bisect_left) to find the first element >= x and replace it. If no such element exists, append x.",
+          "timeComplexity": "O(N log N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Defaulting to O(N^2) DP which hits TLE under strict time limits",
+            "Confusing strictly increasing (<) with non-decreasing (<=)"
+          ]
+        },
+        {
+          "id": "linked-list-cycle",
+          "title": "Linked List Cycle",
+          "difficulty": "EASY",
+          "frequency": 89,
+          "topics": ["Hash Table", "Linked List", "Two Pointers"],
+          "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle/",
+          "intuition": "Apply Floyd's Tortoise and Hare algorithm. Advance slow pointer by 1 step and fast pointer by 2 steps. If fast meets slow, a cycle exists. If fast reaches null, there is no cycle.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Dereferencing fast.next when fast or fast.next is null (NullPointerException)",
+            "Checking node values instead of reference equality"
+          ]
+        },
+        {
+          "id": "find-all-duplicates-in-an-array",
+          "title": "Find All Duplicates in an Array",
+          "difficulty": "MEDIUM",
+          "frequency": 86,
+          "topics": ["Array", "Hash Table"],
+          "leetcodeUrl": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+          "intuition": "Because numbers fall in the range [1, n], treat values as indices. Visit index abs(nums[i]) - 1 and negate the element there. If it is already negative, we have seen it before.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Failing to take absolute value when computing target index from previously negated elements",
+            "Mutating array values without restoring them if caller requires state preservation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta SWE E3 / E4",
+      "domain": "meta.com",
+      "themeColor": "#0668E1",
+      "totalTarget": 10,
+      "problems": [
+        {
+          "id": "valid-palindrome-ii",
+          "title": "Valid Palindrome II",
+          "difficulty": "EASY",
+          "frequency": 96,
+          "topics": ["Two Pointers", "String"],
+          "leetcodeUrl": "https://leetcode.com/problems/valid-palindrome-ii/",
+          "intuition": "Use two converging pointers from the outer ends. Upon encountering the first character mismatch, verify if either s[left+1...right] or s[left...right-1] forms a valid palindrome.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Attempting to greedily skip only one side without checking the alternative branch",
+            "Allowing more than one deletion"
+          ]
+        },
+        {
+          "id": "subarray-sum-equals-k",
+          "title": "Subarray Sum Equals K",
+          "difficulty": "MEDIUM",
+          "frequency": 98,
+          "topics": ["Array", "Hash Table", "Prefix Sum"],
+          "leetcodeUrl": "https://leetcode.com/problems/subarray-sum-equals-k/",
+          "intuition": "Maintain a running prefix sum and a frequency hash map of prefix sums seen so far. At each index, add map.getOrDefault(currentPrefixSum - k, 0) to total count.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Forgetting to pre-populate map with {0: 1} to account for subarrays starting at index 0",
+            "Incorrectly applying sliding window two-pointers on arrays that include negative integers"
+          ]
+        },
+        {
+          "id": "merge-intervals",
+          "title": "Merge Intervals",
+          "difficulty": "MEDIUM",
+          "frequency": 95,
+          "topics": ["Array", "Sorting"],
+          "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/",
+          "intuition": "Sort intervals by start timestamp. Iterate sequentially: if current.start <= previous.end, merge by updating previous.end = max(previous.end, current.end); else push current interval.",
+          "timeComplexity": "O(N log N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Forgetting to sort intervals before comparing adjacents",
+            "Assuming overlapping interval always extends the end boundary (e.g. [1, 5] and [2, 3])"
+          ]
+        },
+        {
+          "id": "move-zeroes",
+          "title": "Move Zeroes",
+          "difficulty": "EASY",
+          "frequency": 91,
+          "topics": ["Array", "Two Pointers"],
+          "leetcodeUrl": "https://leetcode.com/problems/move-zeroes/",
+          "intuition": "Keep an insertion pointer insertPos. Iterate through the array; whenever nums[i] != 0, swap nums[insertPos] with nums[i] and increment insertPos.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Re-ordering non-zero elements relative to their original positions",
+            "Writing values without swapping, leaving duplicates behind"
+          ]
+        },
+        {
+          "id": "product-of-array-except-self",
+          "title": "Product of Array Except Self",
+          "difficulty": "MEDIUM",
+          "frequency": 97,
+          "topics": ["Array", "Prefix Sum"],
+          "leetcodeUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+          "intuition": "Fill the output array with prefix running products from left to right. Then traverse backwards with a running suffix product accumulator, multiplying each element in-place.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Using division (explicitly banned in problem constraints)",
+            "Arrays containing single or multiple zero elements"
+          ]
+        },
+        {
+          "id": "diagonal-traverse",
+          "title": "Diagonal Traverse",
+          "difficulty": "MEDIUM",
+          "frequency": 87,
+          "topics": ["Array", "Matrix", "Simulation"],
+          "leetcodeUrl": "https://leetcode.com/problems/diagonal-traverse/",
+          "intuition": "Group elements by diagonal key d = r + c. Reverse alternate diagonal buckets before concatenating them into the final 1D array.",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(M * N)",
+          "pitfalls": [
+            "Out-of-bounds boundary errors when transitioning between diagonal borders",
+            "Handling non-square rectangular matrices where rows != cols"
+          ]
+        },
+        {
+          "id": "implement-trie-prefix-tree",
+          "title": "Implement Trie (Prefix Tree)",
+          "difficulty": "MEDIUM",
+          "frequency": 90,
+          "topics": ["Hash Table", "String", "Design", "Trie"],
+          "leetcodeUrl": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+          "intuition": "Use nodes containing an array of 26 children references and an isEnd boolean flag. Insert traverses or instantiates nodes character by character. Search checks matching path and isEnd; startsWith checks path existence.",
+          "timeComplexity": "O(L) per operation",
+          "spaceComplexity": "O(Total Chars)",
+          "pitfalls": [
+            "Returning true for search when only a prefix exists but isEnd is false",
+            "Allocating unnecessary child arrays for null transitions"
+          ]
+        },
+        {
+          "id": "reorder-list",
+          "title": "Reorder List",
+          "difficulty": "MEDIUM",
+          "frequency": 89,
+          "topics": ["Linked List", "Two Pointers", "Stack", "Recursion"],
+          "leetcodeUrl": "https://leetcode.com/problems/reorder-list/",
+          "intuition": "Split list into two halves with fast/slow pointers. Reverse the second half in-place. Interleave nodes alternately from the head of the first half and the reversed second half.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Failing to break the link between first and second half (creates infinite cycle)",
+            "Losing next pointers while interleaving"
+          ]
+        },
+        {
+          "id": "add-two-numbers",
+          "title": "Add Two Numbers",
+          "difficulty": "MEDIUM",
+          "frequency": 94,
+          "topics": ["Linked List", "Math", "Recursion"],
+          "leetcodeUrl": "https://leetcode.com/problems/add-two-numbers/",
+          "intuition": "Iterate through both lists simultaneously while maintaining an integer carry. Create a new ListNode for (sum % 10) and forward carry = sum / 10 until both lists and the carry are exhausted.",
+          "timeComplexity": "O(max(M, N))",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Forgetting to emit a trailing node when a carry remains after both lists end",
+            "Unequal length linked lists dereferencing null pointers"
+          ]
+        },
+        {
+          "id": "clone-graph",
+          "title": "Clone Graph",
+          "difficulty": "MEDIUM",
+          "frequency": 92,
+          "topics": ["Hash Table", "Depth-First Search", "Breadth-First Search", "Graph"],
+          "leetcodeUrl": "https://leetcode.com/problems/clone-graph/",
+          "intuition": "Use DFS or BFS paired with a hash map mapping originalNode -> clonedNode. For every neighbor of a visited node, either clone it or retrieve its existing clone from the map and attach.",
+          "timeComplexity": "O(V + E)",
+          "spaceComplexity": "O(V)",
+          "pitfalls": [
+            "Infinite recursion in cyclic undirected graphs without visited map",
+            "Handling empty graph input (null node)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apple",
+      "name": "Apple SWE ICT2 / ICT3",
+      "domain": "apple.com",
+      "themeColor": "#555555",
+      "totalTarget": 10,
+      "problems": [
+        {
+          "id": "two-sum",
+          "title": "Two Sum",
+          "difficulty": "EASY",
+          "frequency": 98,
+          "topics": ["Array", "Hash Table"],
+          "leetcodeUrl": "https://leetcode.com/problems/two-sum/",
+          "intuition": "Use a hash map storing value -> index. For each element x, check if complement (target - x) is present in map; if yes, return their indices; otherwise record x.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Using the exact same array element twice to satisfy target",
+            "Assuming input array is sorted (which is not guaranteed in standard Two Sum)"
+          ]
+        },
+        {
+          "id": "longest-substring-without-repeating-characters",
+          "title": "Longest Substring Without Repeating Characters",
+          "difficulty": "MEDIUM",
+          "frequency": 96,
+          "topics": ["Hash Table", "String", "Sliding Window"],
+          "leetcodeUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+          "intuition": "Maintain a sliding window [left, right] and a hash map of last seen indices for each character. When a repeating character is found inside the window, jump left to lastSeenIndex + 1.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(min(N, M))",
+          "pitfalls": [
+            "Moving left backwards when a repeated character was seen prior to current left boundary",
+            "Off-by-one window length calculations: length is right - left + 1"
+          ]
+        },
+        {
+          "id": "reverse-linked-list",
+          "title": "Reverse Linked List",
+          "difficulty": "EASY",
+          "frequency": 95,
+          "topics": ["Linked List", "Recursion"],
+          "leetcodeUrl": "https://leetcode.com/problems/reverse-linked-list/",
+          "intuition": "Maintain three pointers: prev, curr, and next. In each step, save curr.next, redirect curr.next = prev, advance prev = curr, and curr = next.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Losing reference to the remaining list before updating curr.next",
+            "Not setting original head's next pointer to null (creates cycle)"
+          ]
+        },
+        {
+          "id": "string-to-integer-atoi",
+          "title": "String to Integer (atoi)",
+          "difficulty": "MEDIUM",
+          "frequency": 90,
+          "topics": ["String"],
+          "leetcodeUrl": "https://leetcode.com/problems/string-to-integer-atoi/",
+          "intuition": "Sequentially strip leading whitespace, read optional sign (+/-), parse consecutive digits while checking for 32-bit signed integer boundary clamp [ -2^31, 2^31 - 1 ].",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Handling 32-bit signed integer overflow before multiplying by 10",
+            "Invalid leading non-numeric characters aborting parsing immediately"
+          ]
+        },
+        {
+          "id": "spiral-matrix",
+          "title": "Spiral Matrix",
+          "difficulty": "MEDIUM",
+          "frequency": 91,
+          "topics": ["Array", "Matrix", "Simulation"],
+          "leetcodeUrl": "https://leetcode.com/problems/spiral-matrix/",
+          "intuition": "Maintain four boundary limits: top, bottom, left, right. Traverse across top row, down right column, left along bottom row, and up left column, contracting boundaries inward.",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Duplicating elements on single-row or single-column matrices when bottom/top boundaries cross",
+            "Failing to re-check boundary conditions midway through the directional loops"
+          ]
+        },
+        {
+          "id": "search-in-rotated-sorted-array",
+          "title": "Search in Rotated Sorted Array",
+          "difficulty": "MEDIUM",
+          "frequency": 93,
+          "topics": ["Array", "Binary Search"],
+          "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+          "intuition": "In modified binary search, at least one half [low, mid] or [mid, high] is guaranteed to be strictly sorted. Determine which half is sorted and check if target lies within that range.",
+          "timeComplexity": "O(log N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Using strict inequalities (<) instead of inclusive (<=) when checking boundary inclusion",
+            "Assuming rotation pivot is at the middle"
+          ]
+        },
+        {
+          "id": "3sum",
+          "title": "3Sum",
+          "difficulty": "MEDIUM",
+          "frequency": 94,
+          "topics": ["Array", "Two Pointers", "Sorting"],
+          "leetcodeUrl": "https://leetcode.com/problems/3sum/",
+          "intuition": "Sort the array. Fix the first element nums[i] and use two pointers (left and right) on the remainder to find pairs summing to -nums[i]. Skip duplicates after finding matches.",
+          "timeComplexity": "O(N^2)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Generating duplicate triplets by failing to skip identical adjacent elements",
+            "Incorrect pointer movements after finding a match (both left and right must advance)"
+          ]
+        },
+        {
+          "id": "number-of-islands",
+          "title": "Number of Islands",
+          "difficulty": "MEDIUM",
+          "frequency": 95,
+          "topics": ["Array", "Depth-First Search", "Breadth-First Search", "Union-Find", "Matrix"],
+          "leetcodeUrl": "https://leetcode.com/problems/number-of-islands/",
+          "intuition": "Scan the grid. When encountering an unvisited '1', increment island count and initiate DFS/BFS to sink all 4-directionally connected land cells to '0'.",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(M * N)",
+          "pitfalls": [
+            "Queue memory overflow in BFS when not marking cells visited immediately upon enqueueing",
+            "Stack overflow in deep recursion grids without increasing recursion depth"
+          ]
+        },
+        {
+          "id": "kth-largest-element-in-an-array",
+          "title": "Kth Largest Element in an Array",
+          "difficulty": "MEDIUM",
+          "frequency": 92,
+          "topics": ["Array", "Divide and Conquer", "Sorting", "Heap (Priority Queue)", "Quickselect"],
+          "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+          "intuition": "Maintain a Min-Heap of size k. Push elements into the heap; whenever size exceeds k, pop the smallest. The root at the end is the kth largest element.",
+          "timeComplexity": "O(N log K)",
+          "spaceComplexity": "O(K)",
+          "pitfalls": [
+            "Using Max-Heap of size N which uses O(N log N) time and O(N) memory",
+            "Quickselect worst-case O(N^2) without randomized pivot selection"
+          ]
+        },
+        {
+          "id": "lru-cache",
+          "title": "LRU Cache",
+          "difficulty": "MEDIUM",
+          "frequency": 96,
+          "topics": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
+          "leetcodeUrl": "https://leetcode.com/problems/lru-cache/",
+          "intuition": "Combine a HashMap for O(1) key lookups with a Doubly-Linked List (DLL) to track recency. Move nodes to head upon access; evict tail node when capacity overflows.",
+          "timeComplexity": "O(1) for both get and put",
+          "spaceComplexity": "O(Capacity)",
+          "pitfalls": [
+            "Forgetting to update node recency on get operations, not just put",
+            "Evicting DLL node without deleting corresponding entry from HashMap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morgan-stanley",
+      "name": "Morgan Stanley Tech Analyst & SDE",
+      "domain": "morganstanley.com",
+      "themeColor": "#002D62",
+      "totalTarget": 10,
+      "problems": [
+        {
+          "id": "best-time-to-buy-and-sell-stock",
+          "title": "Best Time to Buy and Sell Stock",
+          "difficulty": "EASY",
+          "frequency": 96,
+          "topics": ["Array", "Dynamic Programming"],
+          "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+          "intuition": "Maintain a running minimum price while iterating through prices. At each step, calculate potential profit (currentPrice - minPrice) and track the maximum profit seen.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Attempting to sell before buying (e.g. subtracting from future minPrice)",
+            "Returning negative profit instead of 0 when prices strictly decrease"
+          ]
+        },
+        {
+          "id": "distinct-subsequences",
+          "title": "Distinct Subsequences",
+          "difficulty": "HARD",
+          "frequency": 88,
+          "topics": ["String", "Dynamic Programming"],
+          "leetcodeUrl": "https://leetcode.com/problems/distinct-subsequences/",
+          "intuition": "Use 2D DP where dp[i][j] is the number of distinct subsequences of s[0..i-1] matching t[0..j-1]. If s[i-1] == t[j-1], dp[i][j] = dp[i-1][j-1] + dp[i-1][j]; else dp[i-1][j].",
+          "timeComplexity": "O(M * N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Integer overflow in 32-bit types (requires 64-bit unsigned integers)",
+            "Base condition dp[i][0] must equal 1 (empty target string matches any prefix once)"
+          ]
+        },
+        {
+          "id": "merge-intervals",
+          "title": "Merge Intervals",
+          "difficulty": "MEDIUM",
+          "frequency": 93,
+          "topics": ["Array", "Sorting"],
+          "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/",
+          "intuition": "Sort intervals by start timestamp. Compare current interval against last added interval in output. If overlapping (current.start <= last.end), merge them; otherwise append.",
+          "timeComplexity": "O(N log N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Not sorting before comparison",
+            "Overwriting end without checking max(last.end, current.end)"
+          ]
+        },
+        {
+          "id": "first-missing-positive",
+          "title": "First Missing Positive",
+          "difficulty": "HARD",
+          "frequency": 91,
+          "topics": ["Array", "Hash Table"],
+          "leetcodeUrl": "https://leetcode.com/problems/first-missing-positive/",
+          "intuition": "Cycle sort in-place: place every value x in range [1, N] at index x - 1 by swapping. Then scan from index 0; the first index where nums[i] != i + 1 reveals the missing number.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Infinite loops during swaps when nums[i] == nums[nums[i] - 1] (must break on duplicate values)",
+            "Ignoring negative numbers and numbers greater than N"
+          ]
+        },
+        {
+          "id": "binary-tree-level-order-traversal",
+          "title": "Binary Tree Level Order Traversal",
+          "difficulty": "MEDIUM",
+          "frequency": 92,
+          "topics": ["Tree", "Breadth-First Search", "Binary Tree"],
+          "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+          "intuition": "Use a BFS queue. For each level, determine queue size, dequeue exactly that many nodes to assemble the current tier's list, and enqueue their children.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(N)",
+          "pitfalls": [
+            "Dynamic queue length modification inside the loop without capturing level size beforehand",
+            "Handling empty root node without returning []"
+          ]
+        },
+        {
+          "id": "invert-binary-tree",
+          "title": "Invert Binary Tree",
+          "difficulty": "EASY",
+          "frequency": 90,
+          "topics": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
+          "leetcodeUrl": "https://leetcode.com/problems/invert-binary-tree/",
+          "intuition": "Traverse the tree recursively or iteratively. For every visited node, swap its left and right child pointers before proceeding to subtrees.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(H)",
+          "pitfalls": [
+            "Overwriting left child before recursing into right child without temp reference",
+            "Handling null leaf pointers without base guard"
+          ]
+        },
+        {
+          "id": "trapping-rain-water",
+          "title": "Trapping Rain Water",
+          "difficulty": "HARD",
+          "frequency": 95,
+          "topics": ["Array", "Two Pointers", "Dynamic Programming", "Stack"],
+          "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water/",
+          "intuition": "Use two converging pointers from the outer ends. Maintain leftMax and rightMax. Water accumulation above the shorter boundary is computed and added to total volume.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Advancing the pointer with the greater height instead of the smaller",
+            "Negative water calculation if height is greater than running boundary max"
+          ]
+        },
+        {
+          "id": "longest-substring-without-repeating-characters",
+          "title": "Longest Substring Without Repeating Characters",
+          "difficulty": "MEDIUM",
+          "frequency": 94,
+          "topics": ["Hash Table", "String", "Sliding Window"],
+          "leetcodeUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+          "intuition": "Expand right pointer across the string and map characters to their most recent index. When a duplicate occurs, slide the left pointer to max(left, lastSeenIndex + 1).",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(min(N, M))",
+          "pitfalls": [
+            "Sliding left pointer backwards when character was previously seen outside current window",
+            "Using fixed ASCII array when input contains extended Unicode symbols"
+          ]
+        },
+        {
+          "id": "reverse-nodes-in-k-group",
+          "title": "Reverse Nodes in k-Group",
+          "difficulty": "HARD",
+          "frequency": 89,
+          "topics": ["Linked List", "Recursion"],
+          "leetcodeUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+          "intuition": "Check if at least k nodes remain. If so, reverse the group of k nodes, recursively or iteratively connect to the next reversed group, and maintain proper pointer boundaries.",
+          "timeComplexity": "O(N)",
+          "spaceComplexity": "O(1)",
+          "pitfalls": [
+            "Reversing trailing group containing fewer than k nodes (must leave as-is)",
+            "Breaking pointer continuity between reversed segments"
+          ]
+        },
+        {
+          "id": "coin-change",
+          "title": "Coin Change",
+          "difficulty": "MEDIUM",
+          "frequency": 91,
+          "topics": ["Array", "Dynamic Programming", "Breadth-First Search"],
+          "leetcodeUrl": "https://leetcode.com/problems/coin-change/",
+          "intuition": "Bottom-up 1D DP where dp[i] is the minimum coins needed for amount i. Transition: dp[i] = min(dp[i], dp[i - c] + 1) for each coin c <= i.",
+          "timeComplexity": "O(Amount * N)",
+          "spaceComplexity": "O(Amount)",
+          "pitfalls": [
+            "Integer overflow when initializing with INT_MAX instead of amount + 1",
+            "Unreachable amounts returning positive sentinel values instead of -1"
+          ]
+        }
+      ]
+    }
+  ]
+}
